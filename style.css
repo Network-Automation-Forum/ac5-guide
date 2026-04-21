@@ -247,7 +247,6 @@ table.ws-table { width: 100%; border-collapse: collapse; min-width: 560px; }
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 2px; margin: 14px 0 2px;
 }
-@media (max-width: 600px) { .thu-track-change { grid-template-columns: 1fr; } }
 .thu-track-cell {
   font-family: var(--font-mono);
   font-size: 8px; letter-spacing: 1.5px;
@@ -255,6 +254,21 @@ table.ws-table { width: 100%; border-collapse: collapse; min-width: 560px; }
   padding: 6px 12px; background: var(--dark3);
 }
 .thu-track-cell.highlight { color: var(--yellow); border-left: 2px solid var(--yellow); }
+.thu-track-mobile { display: none; }
+@media (max-width: 600px) {
+  .thu-track-change { display: block; }
+  .thu-track-cell   { display: none; }
+  .thu-track-mobile { display: block; background: var(--dark3); }
+  .thu-track-mobile-row {
+    font-family: var(--font-mono);
+    font-size: 8px; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 7px 12px; display: block;
+  }
+  .thu-track-mobile-row + .thu-track-mobile-row { border-top: 1px solid var(--black); }
+  .thu-track-mobile-general { color: var(--yellow); }
+  .thu-track-mobile-parallel { color: #AAAAAA; }
+}
 
 /* ── LIGHTNING ───────────────────────────────────────── */
 .lightning-hdr {
