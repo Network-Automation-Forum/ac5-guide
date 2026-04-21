@@ -332,6 +332,99 @@ table.ws-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 }
 .tier-prt .logo-wrap { width: 160px; height: 60px; }
 
+/* ── VENUE GUIDE ─────────────────────────────────────── */
+.venue-guide {
+  margin: 24px 0 28px;
+  border: 1px solid var(--faint);
+  background: var(--dark1);
+  padding: 14px 18px;
+  display: inline-block;
+}
+.venue-guide-title {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: 2px;
+  text-transform: uppercase; color: #AAAAAA;
+  margin-bottom: 10px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--faint);
+}
+.venue-floor {
+  display: flex; align-items: baseline; gap: 14px;
+  padding: 5px 0;
+}
+.venue-floor + .venue-floor { border-top: 1px solid #1A1A1A; }
+.floor-lvl {
+  font-family: var(--font-display);
+  font-weight: 800; font-size: 13px;
+  width: 24px; flex-shrink: 0; text-align: right;
+}
+.floor-lvl-plus, .floor-lvl-minus { color: var(--white); }
+.floor-lvl-gf { color: var(--yellow); }
+.floor-rooms { font-family: var(--font-mono); font-size: 11px; color: #CCCCCC; }
+
+/* ── ROOM LABELS ─────────────────────────────────────── */
+.day-room {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #777777;
+  margin: -10px 0 14px;
+}
+.day-room-pin { color: var(--yellow); margin-right: 4px; }
+.thu-col-hdr-room {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: normal; font-size: 8px;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: #777777; margin-top: 3px;
+}
+.ws-th-room {
+  font-family: var(--font-mono);
+  font-weight: normal; font-size: 9px;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  color: #888888; margin-top: 3px;
+}
+
+/* ── SESSION TIMES ───────────────────────────────────── */
+.talk-time {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.5px;
+  color: #888888; margin-bottom: 5px;
+}
+.thu-cell-time {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: 0.5px;
+  color: #777777; margin-bottom: 5px;
+}
+
+/* ── SCHEDULE ENTRIES (breaks · events · sponsors) ────── */
+.sched-item {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--font-mono); font-size: 10px;
+  padding: 5px 0 5px 16px;
+  border-left: 2px solid var(--dark3);
+  margin-bottom: 2px;
+}
+.sched-item.sched-event  { border-left-color: var(--faint); }
+.sched-item.sched-sponsor { border-left-color: var(--faint); font-style: italic; }
+.sched-time { color: #666666; white-space: nowrap; flex-shrink: 0; }
+.sched-label { color: #777777; }
+.sched-item.sched-event .sched-label { color: #888888; }
+.thu-sched-span {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--font-mono); font-size: 10px;
+  padding: 6px 12px; margin-bottom: 2px;
+  border-left: 2px solid var(--dark3);
+  background: var(--black);
+}
+.thu-sched-span .sched-label { color: #666666; }
+.thu-cell-sched {
+  display: flex; align-items: baseline; gap: 8px;
+  padding: 7px 12px; background: var(--black);
+  font-family: var(--font-mono); font-size: 10px;
+}
+.thu-cell-sched .sched-label { color: #666666; }
+@media (max-width: 600px) { .thu-cell-sched:empty { display: none; } }
+.lightning-time { color: #666666; margin-right: 6px; }
+
 /* ── FOOTER ──────────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--faint);
